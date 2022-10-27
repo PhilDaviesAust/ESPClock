@@ -4,8 +4,8 @@
 /* 
 	ESPClock class - 12 hr clock
 	Will return 0 till clock is set setTime('time of day in seconds')
-	Returns Hours, Minutes and Seconds as uint8_t
-	Returns time '00:00:00' as String
+	Returns time of day as Hours, Minutes and Seconds
+	Returns time of day '00:00:00' as String
 */
 
 ESPClock::ESPClock()

@@ -1,4 +1,6 @@
 # Arduino library for the ESP8266 Clock
+    Tracks time of day once a base time is set
+    returns time of day
 
     initialise clock    -  ESPClock myClock;
     set time            -  myClock.setTime(timeOfDayInSeconds);
