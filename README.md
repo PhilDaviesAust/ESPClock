@@ -3,7 +3,7 @@
     returns time of day
 
     initialise clock    -  ESPClock myClock;
-    set time            -  myClock.setTime(timeOfDayInSeconds);
+    set time            -  myClock.setTime(unit32_t timeOfDayInSeconds);
     has time been set   -  myClock.isSet();         true if time has been set
     get current time    -  myClock.getTime();       returns a String (HH:MM:SS)
     get current hours   -  myClock.getHours();      returns hours as uint8_t 
