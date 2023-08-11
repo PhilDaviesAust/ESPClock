@@ -23,7 +23,7 @@ String ESPClock::getTime() {
 
 uint8_t ESPClock::getHours() {
 	uint8_t hours = (now()/3600);
-	if(hours !=12) hours %= 12;
+	if(hours !=12) hours %= 12;		// 12hr time
 	return hours;
 }
 
@@ -36,11 +36,10 @@ uint8_t ESPClock::getSeconds() {
 }
 
 uint8_t ESPClock::setTime(uint32_t seconds) {
-	if(seconds>SECONDS_PER_DAY) return 1;
-	_baseSeconds = seconds;
+	_baseSeconds = abs(seconds) % SECONDS_PER_DAY;
 	_baseMillis = millis();
 	_isSet = true;
-	return 0;
+	return true;
 }
 
 bool ESPClock::isSet() {

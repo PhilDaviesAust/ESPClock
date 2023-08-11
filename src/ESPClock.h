@@ -8,9 +8,9 @@ class ESPClock{
 public:
 	ESPClock();
 	String getTime();
-	uint8_t getHours();		// get current time hours
-	uint8_t getMinutes();	// get current time minutes
-	uint8_t getSeconds();	// get current time seconds
+	uint8_t getHours();		// get current hour
+	uint8_t getMinutes();	// get current minutes
+	uint8_t getSeconds();	// get current seconds
 	// set time of day in seconds
 	uint8_t setTime(uint32_t seconds);
 	bool isSet();
