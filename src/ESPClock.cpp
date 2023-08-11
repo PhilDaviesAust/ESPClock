@@ -36,7 +36,6 @@ uint8_t ESPClock::getSeconds() {
 }
 
 uint8_t ESPClock::setTime(uint32_t seconds) {
-	seconds = abs(seconds);
 	_baseSeconds = seconds % SECONDS_PER_DAY;
 	_baseMillis = millis();
 	_isSet = true;
