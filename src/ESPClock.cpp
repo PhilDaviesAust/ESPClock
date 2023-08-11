@@ -23,7 +23,7 @@ String ESPClock::getTime() {
 
 uint8_t ESPClock::getHours() {
 	uint8_t hours = (now()/3600);
-	if(hours !=12) hours %= 12;		// 12hr time
+	if(hours !=12) hours %= 12;		// convert to 12hr time
 	return hours;
 }
 
