@@ -8,6 +8,7 @@ class ESPClock{
 public:
 	ESPClock();
 	String getTime();
+	uint32_t getNow();		// get time of day in seconds
 	uint8_t getHours();		// get current hour
 	uint8_t getMinutes();	// get current minutes
 	uint8_t getSeconds();	// get current seconds

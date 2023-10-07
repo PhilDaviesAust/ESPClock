@@ -15,23 +15,31 @@ ESPClock::ESPClock()
 	_isSet = false;
 }
 
+// getTime() returns current time formatted (HH:mm:ss)
 String ESPClock::getTime() {
 	char time[9];
 	snprintf(time, sizeof(time), "%2u:%02u:%02u", getHours(), getMinutes(), getSeconds());
 	return String(time);
 }
 
+// getHours() returns hours component of current time (12hr time)
 uint8_t ESPClock::getHours() {
 	uint8_t hours = (now()/3600);
 	if(hours !=12) hours %= 12;		// convert to 12hr time
 	return hours;
 }
 
+// getMinutes() returns minutes component of current time
 uint8_t ESPClock::getMinutes() {
 	return (now()/60) % 60;
 }
 
+// getSeconds() returns seconds component of current time
 uint8_t ESPClock::getSeconds() {
+	return now() % 60;
+}
+// getNow() returns time of day in seconds
+uint32_t ESPClock::getNow() {
 	return now() % 60;
 }
 
