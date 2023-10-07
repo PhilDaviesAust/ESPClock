@@ -40,7 +40,7 @@ uint8_t ESPClock::getSeconds() {
 }
 // getNow() returns time of day in seconds
 uint32_t ESPClock::getNow() {
-	return now() % 60;
+	return now();
 }
 
 uint8_t ESPClock::setTime(uint32_t seconds) {
